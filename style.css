@@ -1,9 +1,5 @@
-// klsdfh ukahflasu
-
-/* style.css */
-
 body {
-  background: linear-gradient(to top, #fffbe6, #ffe4b5); /* Yumuşak sabah renkleri */
+  background: linear-gradient(to top, #fffbe6, #ffe4b5);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   padding-top: 100px;
@@ -12,7 +8,7 @@ body {
 }
 
 h1 {
-  color: #ffa500; /* Turuncu sabah güneşi */
+  color: #ffa500;
   font-size: 3em;
   margin-bottom: 10px;
 }
@@ -29,9 +25,24 @@ img {
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
 }
 
-/* Responsive için küçük ekranlarda görsel boyutunu ayarla */
+/* Shake animasyonu */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+/* Mobil cihazlar için görsel boyutu */
 @media (max-width: 600px) {
   img {
     width: 90%;
@@ -45,4 +56,3 @@ img {
     font-size: 1.2em;
   }
 }
-
